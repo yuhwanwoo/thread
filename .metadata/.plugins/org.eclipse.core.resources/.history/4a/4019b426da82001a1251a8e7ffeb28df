@@ -1,0 +1,24 @@
+package basic;
+
+
+class DigitThread extends Thread{
+	public DigitThread(String name) {
+		super(name);
+	}
+	public void run() {
+		for(int i=0;i<100;i++) {
+			System.out.println(i+"("+getName()+")");
+			
+			Thread.sleep(1000);
+		}
+	}
+}
+
+
+public class ThreadExam01 {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

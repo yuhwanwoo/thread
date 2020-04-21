@@ -1,0 +1,19 @@
+package basic;
+
+
+class StopThread01 extends Thread{
+	public void run() {
+		while(true) {
+			
+		}
+	}
+}
+
+public class StopThreadTest01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

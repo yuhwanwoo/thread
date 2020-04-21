@@ -1,0 +1,63 @@
+package basic;
+
+
+class DigitThread extends Thread{
+	public DigitThread(String name) {
+		super(name);
+	}
+	public void run() {
+		for(int i=0;i<100;i++) {
+			System.out.print(i+"("+getName()+")");
+			
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
+class AlphaThread extends Thread{
+	char a='A';
+	public AlphaThread(String name) {
+		super(name);
+	}
+	public void run() {
+		for(int i=0;i<26;i++) {
+			a+=i;
+			System.out.print(a);
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
+
+public class ThreadExam01 {
+
+	public static void main(String[] args) {
+		DigitThread th1=new DigitThread("digit");
+		AlphaThread th2=new AlphaThread("alpha");
+		th1.start();
+		th2.start();
+		System.out.println("ÀÛ¾÷Áß......");
+		for (int i = 0; i <=10; i++) {
+			System.out.print("main");
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		
+	}
+
+}

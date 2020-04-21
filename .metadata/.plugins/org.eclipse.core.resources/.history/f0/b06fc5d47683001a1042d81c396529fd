@@ -1,0 +1,25 @@
+package basic;
+
+
+class StopThread01 extends Thread{
+	public void run() {
+		while(true) {
+			System.out.println("쓰레드 실행중~~~");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
+public class StopThreadTest01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

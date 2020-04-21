@@ -1,0 +1,22 @@
+package basic;
+
+
+class DigitThread extends Thread{
+	public DigitThread(String name) {
+		super(name);
+	}
+	public void run() {
+		for(int i=0;i<100;i++) {
+			
+		}
+	}
+}
+
+
+public class ThreadExam01 {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
